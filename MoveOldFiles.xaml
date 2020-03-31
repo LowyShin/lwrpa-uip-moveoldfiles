@@ -129,7 +129,7 @@
                 <InArgument x:TypeArguments="x:Int32">[cint(row(1).ToString)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:PathExists DisplayName="Path Exists" Exists="[isSourceExists]" sap:VirtualizedContainerService.HintSize="1170,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[sPathSource]" PathType="File" />
+            <ui:PathExists DisplayName="Path Exists" Exists="[isSourceExists]" sap:VirtualizedContainerService.HintSize="1170,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[sPathSource]" PathType="Folder" />
             <If Condition="[isSourceExists]" sap:VirtualizedContainerService.HintSize="1170,1695" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="1025,1547" sap2010:WorkflowViewState.IdRef="Sequence_5">
