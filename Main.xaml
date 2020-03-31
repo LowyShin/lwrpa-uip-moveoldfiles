@@ -95,10 +95,15 @@
     </Assign>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="521,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[gPathRoot + &quot;lwrpa-uip-moveoldfiles\MoveOldFiles.xaml&quot;]">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="rq_PathSource">[sPathSource]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="rq_PathTarget">[sPathTarget]</InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="rq_Term">[nTerm]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="rp_RstData">[jRstData]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="rq_PathSource">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="sPathSource" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="rq_PathTarget">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="sPathTarget" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="rp_RstData">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="jRstData" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[jRstData]" />
